@@ -1,0 +1,348 @@
+@font-face {
+    font-family: 'YourFontName';
+    src: url('/fonts/Kjv1611-AXLg.otf') format('opentype'); /* Modern Browsers */
+    /* Add more src lines if you have additional formats */
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Jacquard+24&family=Pirata+One&display=swap');
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body {
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+.parallax {
+    height: clamp(200px, 50vh, 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.space {
+    height: 8vh;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0);
+}
+.parallax h1 {
+    letter-spacing: 0.25rem;
+    font-family: 'YourFontName', Arial, sans-serif;
+    font-size: clamp(24px, 5vw, 50px);
+    color: white;
+    font-weight: 200;
+    text-shadow: 1px 4px 6px rgba(0, 0, 0, 0.97);
+}
+
+.alert {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.alert.alert-success {
+    color: #ffffff;
+    border-color: #a8a8a89f;
+    background-color: #72727248;
+}
+
+.alert.alert-danger {
+    color: #ff5a5a;
+    border-color: #ff5a5a;
+    background-color: #72727248;
+}
+
+.close-btn {
+    position: absolute;
+    align-items: center;
+    right: 10px;
+    cursor: pointer;
+}
+.cont-container {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #dbdbdb;
+}
+.product-container{
+    background-color:#25252580;
+}
+.row {
+    padding-top: 8vh;
+}
+
+.product-cont{
+    padding-left: 30px;
+}
+.product-details{
+    min-height: fit-content;
+    border-radius: 12px;
+    background-color: #72727248;
+}
+.product-details h1 {
+    padding-top: 20px;
+    color: #e4eee5;
+    letter-spacing: 0.15rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: lowercase;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.price{
+    color: #e4eee5;
+}
+.product-price {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #e4eee5;
+    margin-bottom: 30px;
+}
+
+.product-description {
+    color: #e4eee5;
+    line-height: 30px;
+    letter-spacing: 0.04rem;
+    margin-bottom: 20px;
+}
+.size-options, .text-quan{
+    padding-left: 20px;
+}
+.text-quan{
+    
+    color: #e4eee5;
+}
+.cont-quant, .sizes{
+    padding: 10px 0px;
+}
+
+#quantity {
+    margin: 5px;
+    width: 100px;
+    padding: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+#quantity::-webkit-inner-spin-button,
+#quantity::-webkit-outer-spin-button {
+    -webkit-appearance: inner-spin-button !important;
+    opacity: 1 !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    background-color: #ddd;
+}
+
+input[type="number"]::-webkit-outer-spin-button {
+    background-color: #ddd;
+}
+
+#quantityError {
+    margin-top: 10px;
+}
+
+.btn-check {
+    margin-left: 20px;
+    display: none;
+}
+.btn-size.disabled {
+    opacity: 0.5; 
+    cursor: not-allowed;
+}
+.btn-size {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    display: inline-block;
+    padding: 8px 30px;
+    margin: 5px;
+    border: 1px solid #3d3d3dad;
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-size:hover {
+    background-color: #000000;
+    color: white;
+    border-color: #3a3a3a;
+}
+
+.btn-check:checked+.btn-size {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+    border-width: 1px;
+}
+
+.label-size {
+
+    letter-spacing: 0.10rem;
+    opacity: 0.6;
+}
+
+.quantity-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-wrapper button {
+    background-color: #ffffff;
+    border: 1px solid #3d3d3dad;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.quantity-wrapper input[type="number"] {
+    text-align: center;
+    border: 1px solid #3d3d3dad;
+    width: 50px;
+    margin: 0 5px;
+}
+.sku-cat{
+    text-transform: lowercase;
+    letter-spacing: 0.05rem;
+    line-height: 30px;
+}
+.sku-cat span{
+    opacity: 0.6;
+}
+.img-container {
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 10px rgb(26, 26, 26);
+}
+.img-container img{
+    width: 100%;
+    height: 100%;
+}
+
+.zoom-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-repeat: no-repeat;
+    visibility: hidden;
+    z-index: 999;
+}
+
+.img-container:hover .zoom-container {
+    visibility: visible;
+    cursor: zoom-in;
+    overflow: hidden;
+}
+.btn-close{
+    color: white;
+    box-shadow: none;
+}
+
+.btn-close:active{
+    box-shadow: none;
+}
+
+.btn.btn-chart.btn-primary {
+    padding: 0;
+    padding-bottom: 20px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    text-decoration: underline; 
+}
+
+.btn.btn-chart.btn-primary:active {
+    background-color: transparent;
+    border: none;
+}
+
+.prdct-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    margin: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 10px rgb(26, 26, 26);
+}
+
+.card .img-size {
+    transition: all 0.3s ease;
+}
+.card .product-info {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.card:hover .img-size {
+    filter: brightness(50%);
+}
+
+.card:hover .product-info {
+    opacity: 1;
+}
+
+.product-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.product-icons a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    margin: 1px;
+    font-size: 20px;
+}
+.product-icons a:hover i{
+    animation: bounce 0.5s;
+    color: #000000;
+}
+.product-icons a:hover{
+    background-color: white;
+}
+.name a{
+    position: relative;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 16px;
+    transition: all ease .3s;
+}
+.name a:hover{
+    color: rgb(167, 167, 167);
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}

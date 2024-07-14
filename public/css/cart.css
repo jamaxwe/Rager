@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Jacquard+24&family=Pirata+One&display=swap');
+
+body {
+    background-attachment: fixed;
+    background-position: 50% 150%;
+    background-repeat: repeat-y;
+    background-size: cover;
+
+}
+
+.parallax {
+    height: clamp(100px, 20vh, 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.parallax h1 {
+    letter-spacing: 0.25rem;
+    font-family: "Pirata One", system-ui;
+    font-size: clamp(24px, 5vw, 70px);
+    color: white;
+    font-weight: 700;
+    text-shadow: 1px 4px 6px rgba(0, 0, 0, 0.97);
+
+}
+.Cont-cart{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bgcolor{
+    background-color:#27272780;
+}
+.stlbg{
+    border-radius: 20px;
+    background-color: #f9f9f985;
+}
+.tble {
+    white-space: nowrap;
+    width: 100%;
+}
+.table-cont{
+    padding:0vh 5vh
+}
+.tble tbody tr {
+    border-style: solid hidden solid hidden;
+    border-color: rgba(0, 0, 0, 0.3);
+    border-width: 2px;
+}
+
+.tble tbody tr td {
+    padding: 15px 0px;
+}
+
+thead tr th {
+    text-transform: lowercase;
+    padding-bottom:10px;
+}
+
+.row {
+    padding-top: 3vh;
+}
+
+.close-btn {
+    border: 0;
+    background-color: transparent;
+    opacity: 0.6;
+    transition: all .5s;
+}
+
+.close-btn:hover {
+    opacity: 1;
+    color: rgb(160, 0, 0);
+}
+
+#quantity {
+    left: 0;
+    width: 80px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+
+
+input[type="number"]::-webkit-inner-spin-button {
+    background-color: #ddd;
+}
+
+input[type="number"]::-webkit-outer-spin-button {
+    background-color: #ddd;
+}
+
+.check-sec {
+    padding: 30px 20px;
+}
+.message-container {
+    width: 30%;
+    position: fixed;
+    top:11vh;
+    right: 0;
+    z-index: 1000; /* Ensure it's above other content */
+    padding: 10px;
+}
+.alert {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.alert.alert-success {
+    color: #ffffff;
+    border-color: #a8a8a89f;
+    background-color: #7272729c;
+}
+
+.alert.alert-danger {
+    color: #ff5a5a;
+    border-color: #ff5a5a;
+    background-color: #72727248;
+}
+
+.close-notif {
+    position: absolute;
+    align-items: center;
+    right: 10px;
+    cursor: pointer;
+}
+.btn-edt.btn-primary{
+    padding: 0;
+    color: black;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.btn-edt.btn-primary:hover,
+.btn-edt.btn-primary:focus,
+.btn-edt.btn-primary:active,
+.btn-edt.btn-primary:focus:active {
+    color: rgb(85, 85, 85) !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+form.form-control {
+    background: white;
+    color: black;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.836);
+}
+
+.form-control::placeholder {
+    color: rgba(0, 0, 0, 0.2) !important;
+}
+
+form .form-control:focus,
+.form-control:active {
+    outline: none !important;
+    box-shadow: none;
+    border: 1px solid black;
+}
+
+.cart-ttl {
+    margin-top: 5vh;
+}
+
+
+.empty-icon-container {
+    padding:20vh 0vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Dosis', sans-serif;
+    opacity: 0.4;
+
+}
+
+.return-shop{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    font-size: 14px;
+    width: 100%;
+    margin: 0;
+}
+.return-shop a{
+    color: black;
+    padding: 0px 20px;
+    text-decoration: none;
+    transition: all ease .3s;
+}
+.return-shop a:hover{
+    color: #27272780;
+    text-decoration: none;
+}
+.fa-box-open{
+    font-size: 60px;
+    opacity: 0.5;
+}

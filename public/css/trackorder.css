@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Jacquard+24&family=Pirata+One&display=swap');
+
+body {
+    background-attachment: fixed;
+    background-position: 50% 45%;
+    background-repeat:repeat-y;
+    background-size: cover;
+}
+
+.parallax {
+    height: clamp(200px, 50vh, 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.parallax h1 {
+    letter-spacing: 0.25rem;
+    font-family: "Pirata One", system-ui;
+    font-size: clamp(24px, 5vw, 50px);
+    color: white;
+    font-weight: 700;
+    text-shadow: 1px 4px 6px rgba(0, 0, 0, 0.97);
+}
+@media (max-width: 992px) {
+    .parallax {
+        height: clamp(150px, 35vh, 300px);
+        background-position: 50% 40%;
+
+        .content {
+            padding: 10px;
+        }
+
+        .parallax h1 {
+            font-size: clamp(20px, 6vw, 35px);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .parallax {
+        height: clamp(100px, 35vh, 200px);
+        background-position: center;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .parallax h1 {
+        font-size: clamp(20px, 6vw, 35px);
+    }
+}
+
+@media (max-width: 500px) {
+    .parallax {
+        height: clamp(100px, 35vh, 200px);
+        background-position: 50% 50%;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .parallax h1 {
+        font-size: clamp(20px, 20vw, 35px);
+        /* Further adjust font size for small screens */
+    }
+}
+.tnum{
+    padding: 3vh 0vh;
+}
+.srch-btn{
+    font-size: 30px;
+    padding:0vh 2vh;
+}
+.form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: black !important;
+}
+.emt-search{   
+    height: 5vh;
+}
+.hidden {
+    display: none;
+}
+
+.rating-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: white;
+    padding: 30px 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.popup-content {
+    position: relative;
+    text-align: center;
+}
+
+.rating-popup.show {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.star-rating {
+    direction: rtl;
+    display: inline-block;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label.star {
+    font-size: 2em;
+    color: lightgray;
+    cursor: pointer;
+    padding: 0px 5px;
+    transition: color 0.3s;
+}
+
+.star-rating input[type="radio"]:checked ~ label.star,
+.star-rating label.star:hover,
+.star-rating label.star:hover ~ label.star {
+    color: rgb(0, 0, 0);
+}
+
+.btn.btn-primary {
+    border-radius: 0;
+    border-color: black;
+    background-color: black;
+}
+
+.btn.btn-primary.active,
+.btn.btn-primary.focus {
+    background-color: white;
+    color: black;
+}
+
+.button-container {
+    position: absolute;
+    top: -10px; /* Adjust top positioning as needed */
+    right: 5px; /* Adjust right positioning as needed */
+}
+
+button.btn-close {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+button.btn-close:focus,
+button.btn-close:active{
+    box-shadow: none;
+}

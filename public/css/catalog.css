@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'YourFontName';
+    src: url('/fonts/Kjv1611-AXLg.otf') format('opentype'); /* Modern Browsers */
+    /* Add more src lines if you have additional formats */
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.catalog {
+    height: clamp(200px, 50vh, 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.catalog h2 {
+    letter-spacing: 0.25rem;
+    font-family: 'YourFontName', Arial, sans-serif;
+    font-size: clamp(24px, 5vw, 50px);
+    color: white;
+    font-weight: 200;
+    text-shadow: 1px 4px 6px rgba(0, 0, 0, 0.97);
+}
+.cont-container{
+    background-color: rgba(255, 255, 255);
+}
+.img-cont {
+    text-decoration: none;
+    color: black;
+}
+
+.img-cont:hover {
+    .img-size {
+        opacity: 0.7;
+        background-color: black
+    }
+    text-decoration: underline;
+    .img-cover img{
+        transform: scale(105%);
+    }
+}
+
+.img-size {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all ease .3s;
+}
+
+.img-cover {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-cover img {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    transition: all ease .3s;
+}
+
+.fix-img {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 34, 34, 0.171);
+    background-size: cover;
+}
+
+.fix-img img {
+    position: absolute;
+    z-index: 101;
+    top:0;
+    height: 20px;
+    min-width:50px;
+    background-color: black;
+}
+
+.img-info {
+    text-align: center;
+    padding-top: 10px;
+    color: black;
+    p {
+        font-size: 12px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+}
+.btn.btn-secondary{
+    border-radius: 2px;
+}
+.btn.btn-primary{
+    background-color: black;
+    border-color: black;
+    border-radius: 2px;
+    transition: all ease .3s;
+}
+.btn.btn-primary:active{
+    background-color: white !important;
+    border-color: black !important;
+    color: black !important;
+}
+.btn.btn-primary:hover{
+    background-color: white;
+    border-color: black;
+    color: black;
+}
+form .form-control:focus,
+form .form-control:active {
+    outline: none !important;
+    box-shadow: none;
+    border: 1px solid black;
+}
+.cls-btn{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.button-bg{
+    padding: 5px 0px;
+}
+.btn.btn-close:active,
+.btn.btn-close:focus{
+    box-shadow: none;
+}
+.no-item-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 20px;
+    background-color: #FAF4E6;
+}
+.alert {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.alert.alert-success {
+    color: #ffffff;
+    border-color: #a8a8a89f;
+    background-color: #72727248;
+}
+
+.alert.alert-danger {
+    color: #ff5a5a;
+    border-color: #ff5a5a;
+    background-color: #72727248;
+}
+
+.close-btn {
+    position: absolute;
+    align-items: center;
+    right: 10px;
+    cursor: pointer;
+}

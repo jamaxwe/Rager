@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+@font-face {
+    font-family: 'Swiss 911';
+    src: url('resources/resourceFiles/fonts/Swiss\ 911\ Compressed\ Regular.otf') format('truetype');
+}
+body,
+.main_con {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body {
+    background-color: rgb(0, 0, 0);
+}
+.main_con {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.sec-slide {
+    height: 100vh;
+    position: relative;
+    scroll-snap-align: start;
+}
+
+.vid video {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+}
+
+.cont {
+    background-color: rgba(0, 0, 0, 0.596);
+    position: absolute;
+    object-fit: cover;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont h1 {
+    z-index: 1;
+    color: white;
+    pointer-events: none;
+    user-select: none;
+    font-family: "Teko", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    animation: glow 0.9s ease-in-out infinite alternate;
+    animation-delay: 1s; /* Adjust this value to set the delay */
+    text-align: center;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 20px #fae5e5, 0 0 30px #8bb366, 0 0 40px #3b5f19, 0 0 50px #445c2f, 0 0 60px #5e5023, 0 0 70px #630303;
+    }
+
+    to {
+        text-shadow: 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #75b634, 0 0 70px #47800f, 0 0 80px #274708;
+    }
+}
+#top-products{
+    box-shadow: 0px 0px 18px 30px #040404;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.bgcolor2{
+    background-color: #000000a8;
+    box-shadow: inset 0px 0px 30px 30px #040404;
+}
+#top-products .products {
+    min-height: 50vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+#top-products .product {
+    background-color: #1e1e1e;
+    padding: 1em;
+    text-align: center;
+}
+
+#top-products .product img {
+    max-width: 100%;
+    height: auto;
+}
+
+#about-rager {
+    min-height: 70vh;
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+    text-align: center;
+}
+.text-cont {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about-wrap {
+    background: rgba(0, 0, 0, 0.623); /* Semi-transparent background */
+    width: 100%;
+    height: 70vh;
+}
+
+.about-wrap h2, .about-wrap p {
+    padding: 1vh 10vh;
+    color: white;
+    text-align: start;
+}
+
+#info{
+    background: #000;
+    min-height: 35vh;
+    padding:5vh 2vh;
+}
+.info-item {
+    color: white;
+    text-align: center;
+    max-width: 30%;
+}
+.info-item p{
+    font-size: 12px;
+    padding:0vh 5vh;
+}
+.info-item i{
+    color: white;
+    font-size: 5vh;
+}
+#connection{
+    background-color: #dfdfdf;
+    min-height: 40vh;
+}
+
+#new-arrivals{
+    background-color: red;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.card.card2{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 3px rgb(100, 100, 100);
+}
+.card {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 10px rgb(26, 26, 26);
+}
+.card .img-size,.card.card2 .img-size{
+    transition: all 0.3s ease;
+}
+
+.card .product-info,.card.card2 .product-info {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+.card:hover .img-size,.card2:hover .img-size {
+    filter: brightness(50%);
+}
+
+.card:hover .product-info,.card.card2:hover .product-info  {
+    opacity: 1;
+}
+.name a {
+    position: relative;
+    text-decoration: none;
+    color: #e4eee5;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all .3s;
+}
+
+.name a:hover {
+    color: rgb(0, 63, 0);
+    color: rgb(255, 255, 255);
+}
+.price{
+    color: #e4eee5;
+}
+.bgcolor{
+    background-color:#1d1d1daf; /*Change the bg color*/
+}
+.shop-now a{
+    border-radius: 0;
+    color: #000;
+    text-decoration: none;
+    transition: all .3s;
+   
+}
+.shop-now a:hover{
+    color: white;
+    background-color: black;
+    text-decoration: none;
+}
+.btn.btn-shop{
+    text-align: end;
+   white-space: nowrap;
+    opacity: 0.7;
+    background-color: black;
+    color: white;
+}
+.btn.btn-shop:active,
+.btn.btn-shop:focus{
+    background-color: black;
+    color: white;
+    box-shadow: none;
+}
+.form-mail{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: pink;
+}
+.form-mail input{
+    border-style: none none solid none;
+    border-color: black;
+    height: 50px;
+    width: 150%;
+}
+.btn-sub{
+    width: 100px;
+    border-style: solid ;
+    border-color: black;
+    background-color: black;
+    color: white;
+    transition: all .5s;
+}
+.btn-sub:hover{
+    background-color: rgb(34, 34, 34);
+    color: white;
+}
+.icons i{
+    font-size: 25px;
+    padding: 1vh 1vh;
+}
