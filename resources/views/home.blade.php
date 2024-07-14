@@ -64,7 +64,7 @@
       </div>
       </div>
     @endforeach
-      <div class="col-md-4">
+      <div class="col-md-4 mb-5">
       <div class=" shop-now">
         <a class="btn btn-shop" href="/shop">Shop Now</a>
       </div>
@@ -177,7 +177,7 @@
         <div class="news-cont d-flex flex-column justify-content-center col-md-12">
         <form class="form-mail" action="{{ route('newsletter.subscribe') }}" method="POST">
     @csrf
-    <input type="email" name="email" placeholder="Email Address">
+    <input type="email" name="email" placeholder="&nbsp;&nbsp;&nbsp;Email Address">
     <button type="submit" class="btn-sub">
         <i class="fa fa-paper-plane"></i>
     </button>
